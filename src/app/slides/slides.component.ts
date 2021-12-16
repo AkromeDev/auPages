@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SlidesComponent implements OnInit {
 
+  slideImageUrlOne="url('../assets/12.jpg')";
+  slideImageUrlTwo="url('../assets/16.jpg')";
+  slideImageUrlThree="url('../assets/19.jpg')";
+
   constructor() { }
 
   ngOnInit(): void {
