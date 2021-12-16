@@ -7,9 +7,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SlidesComponent implements OnInit {
 
+  // slideImageUrlOne="assets/12.jpg";
   slideImageUrlOne="url('../assets/12.jpg')";
   slideImageUrlTwo="url('../assets/16.jpg')";
   slideImageUrlThree="url('../assets/19.jpg')";
+
+  images = [
+    {
+      title: 'tree',
+      url: ''
+    },
+    {
+      title: 'tree',
+      url: ''
+    },
+    {
+      title: 'tree',
+      url: ''
+    },
+    {
+      title: 'tree',
+      url: ''
+    },
+    {
+      title: 'tree',
+      url: ''
+    },
+    {
+      title: 'tree',
+      url: ''
+    },
+    {
+      title: 'tree',
+      url: ''
+    },
+  ]
 
   constructor() { }
 
