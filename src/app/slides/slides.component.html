@@ -11,13 +11,15 @@
             
             <!-- side buttons to go to the next slides-->
             <label
-            [ngClass]="{'hover:text-white hover:text-white hover:bg-blue-700': currentPage != 0}"
-            class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black rounded-full bg-white leading-tight text-center z-10 inset-y-0 left-0 my-auto">
+            [ngClass]="{'myDisabled': currentPage === 0}"
+            (click)="currentPage = currentPage - 1"
+            class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute hover:text-white hover:text-white hover:bg-blue-700 cursor-pointer cursor-pointer hidden text-3xl font-bold text-black rounded-full bg-white leading-tight text-center z-10 inset-y-0 left-0 my-auto">
             ‹</label>
             
             <label
-            [ngClass]="{'hover:text-white hover:text-white hover:bg-blue-700': currentPage != images.length -1}"
-            class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black rounded-full bg-white leading-tight text-center z-10 inset-y-0 right-0 my-auto">
+            [ngClass]="{'myDisabled': currentPage === images.length -1}"
+            (click)="currentPage = currentPage + 1"
+            class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute hover:text-white hover:text-white hover:bg-blue-700 cursor-pointer hidden text-3xl font-bold text-black rounded-full bg-white leading-tight text-center z-10 inset-y-0 right-0 my-auto">
             ›</label>
         </div>
         
@@ -25,7 +27,7 @@
         <!-- Add additional indicators for each slide-->
         <ol class="carousel-indicators">
             <li *ngFor="let image of images; let i = index;" class="inline-block mr-3">
-                <label [ngClass]="{active: i === currentPage}" 
+                <label (click)="currentPage = i" [ngClass]="{active: i === currentPage}" 
                 class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700"
                 >•</label>
             </li>

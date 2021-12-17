@@ -4,6 +4,9 @@
     background-position: center center;
     background-repeat: no-repeat;
 }
+.myDisabled {
+    pointer-events: none;
+}
 .active {
     color: blue;
 }
