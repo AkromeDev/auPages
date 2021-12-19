@@ -6,7 +6,7 @@
         <div class="loop" id="carousel-1">
             <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
             <div [style.background-image]="images[currentPage].backgroundImage" class="mySlide carousel-item absolute opacity-0" style="height:100vh">
-                <div class="block h-full w-full text-white text-5xl text-center">{{ images[currentPage].title }}</div>
+                <div class="block h-full w-full text-white text-5xl text-center">{{ images[currentPage].title | titlecase}}</div>
             </div>
             
             <!-- side buttons to go to the next slides-->
