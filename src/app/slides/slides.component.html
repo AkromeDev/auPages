@@ -29,12 +29,16 @@
         </div>
         
         <!-- Add additional indicators for each slide-->
-        <ol class="carousel-indicators">
-            <li *ngFor="let image of images; let i = index;" class="inline-block mr-3">
-                <label (click)="currentPage = i" [ngClass]="{active: i === currentPage}" 
-                class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700"
-                >•</label>
-            </li>
-        </ol>
+        
+            <ol class="carousel-indicators">
+                <ng-container *ngFor="let image of images; let i = index;">
+                <li  class="inline-block mr-3">
+                    <label *ngIf="checkIndexDifference(i)" (click)="currentPage = i" [ngClass]="{active: i === currentPage}" 
+                    class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700"
+                    > {{ i }}</label>
+                </li>
+            </ng-container>
+            </ol>
+        
     </div>
 </div>

@@ -12,6 +12,10 @@ export class SlidesComponent implements OnInit {
   slideImageUrlTwo="url('../assets/16.jpg')";
   slideImageUrlThree="url('../assets/19.jpg')";
 
+  checkIndexDifference(index: number) {
+    return Math.abs(index - this.currentPage) < 3;
+  }
+
   images = [
     {
       title: 'tree',
