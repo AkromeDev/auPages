@@ -5,14 +5,15 @@ import { Directive, ElementRef, Input } from '@angular/core';
   selector: '[appMyClass]'
 })
 export class MyClassDirective {
-  @Input() backgroundColor!: string;
 
   // ElementRef allows us to automatically get the HTML-element the directive was called upon to as a parameter.
   constructor(private element: ElementRef) { 
-    
-    // element = our parameter
-    // nativeElement = the actual HTML element
-    this.element.nativeElement.style.backgroundColor = this.backgroundColor;
   }
 
+    // element = our parameter
+    // nativeElement = the actual HTML element
+    // color = color parameter given in the 
+    @Input() set myBackgroundColor(color: string) {
+      this.element.nativeElement.style.backgroundColor = color;
+    }
 }
