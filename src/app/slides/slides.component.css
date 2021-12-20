@@ -6,9 +6,11 @@
 }
 .myImage {
     position: absolute;
+    display: flex;
+    justify-content: center;
     overflow: hidden;
-    width: 20vw;
-    height: 20vw;
+    width: 40vw;
+    height: 40vw;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
