@@ -13,7 +13,13 @@ export class MyClassDirective {
     // element = our parameter
     // nativeElement = the actual HTML element
     // color = color parameter given in the 
-    @Input('appMyClass') set myBackgroundColor(color: string) {
-      this.element.nativeElement.style.backgroundColor = color;
+    @Input('appMyClass') set classNames(classObj: any) {
+      for (let key in classObj) {
+        if (classObj[key]) {
+          this.element.nativeElement.classList.add(key);
+        } else {
+          this.element.nativeElement.classList.remove(key);
+        }
+      }
     }
 }
