@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SlidesComponent } from './slides/slides.component';
 import { MyClassDirective } from './my-class.directive';
+import { TimesDirective } from './times.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     SlidesComponent,
-    MyClassDirective
+    MyClassDirective,
+    TimesDirective
   ],
   imports: [
     BrowserModule,
