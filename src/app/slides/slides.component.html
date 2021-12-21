@@ -22,6 +22,7 @@
             ‹</label>
             
             <label
+            *appTimes="2"
             [appMyClass]="{'myDisabled': currentPage === images.length -1}"
             (click)="currentPage = currentPage + 1"
             class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute hover:text-white hover:text-white hover:bg-blue-700 cursor-pointer hidden text-3xl font-bold text-black rounded-full bg-white leading-tight text-center z-10 inset-y-0 right-0 my-auto">
@@ -38,6 +39,11 @@
                     > {{ i }}</label>
                 </li>
             </ng-container>
+        </ol>
+        <ol *appTimes="2">
+            <li>
+                Hi there
+            </li>
         </ol>
     </div>
 </div>
