@@ -32,18 +32,13 @@
         <!-- Add additional indicators for each slide-->
         
         <ol class="carousel-indicators">
-            <ng-container *ngFor="let image of images; let i = index;">
+            <ng-container *appTimes="images.length; let i = index;">
                 <li  class="inline-block mr-3">
                     <label *ngIf="checkIndexDifference(i)" (click)="currentPage = i" [appMyClass]="{active: i === currentPage}" 
                     class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700"
                     > {{ i }}</label>
                 </li>
             </ng-container>
-        </ol>
-        <ol *appTimes="2">
-            <li>
-                Hi there
-            </li>
         </ol>
     </div>
 </div>
