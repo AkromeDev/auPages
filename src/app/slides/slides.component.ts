@@ -16,6 +16,7 @@ export class SlidesComponent implements OnInit {
     return Math.abs(index - this.currentPage) < 3;
   }
 
+  // url is for the image in the center and background image is what is displayed behind (thank you captain obvious)
   images = [
     {
       title: 'tree',
